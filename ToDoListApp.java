@@ -18,12 +18,12 @@ class Task implements Serializable {
     @Override
     public String toString() {
         if (isCompleted) {
-            return "[DONE] " + description;
+            return "[Completed] " + description;
         } else {
             return "[PENDING] " + description;
         }
     }
-} // ✅ Properly closed Task class
+} 
 
 public class ToDoListApp {
     private static final String FILE_NAME = "tasks.txt";
@@ -61,7 +61,7 @@ public class ToDoListApp {
                     return;
                 default:
                     System.out.println("Invalid choice! Please try again.");
-                    break; // ✅ Added break for the default case
+                    break;
             }
         }
     }
